@@ -17,7 +17,7 @@ export const itemSidebar = [
       {
         icons: <Library stroke="auto" />,
         title: "Materi",
-        link: "/",
+        link: "/admin/materi",
       },
     ],
   },
