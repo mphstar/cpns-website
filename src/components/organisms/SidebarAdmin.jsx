@@ -4,8 +4,9 @@ import { itemSidebar } from "@/models/ItemSidebarModel";
 import { useState } from "react";
 import GroupSidebar from "../molecules/GroupSidebar";
 import MenuSidebar from "../molecules/MenuSidebar";
+import Link from "next/link";
 
-const SidebarAdmin = ({ showSidebar, handleSidebar }) => {
+const SidebarAdmin = ({ showSidebar, handleSidebar, title }) => {
   const [menuDropdown, setMenuDropdown] = useState(false);
 
   const handleMenu = (e) => {
@@ -28,7 +29,13 @@ const SidebarAdmin = ({ showSidebar, handleSidebar }) => {
           {itemSidebar.map((item, index) => (
             <GroupSidebar name={item.group} key={index}>
               {item.items.map((it, i) => (
-                <MenuSidebar key={i} isActive={it.title == "Dashboard"} icons={it.icons} name={it.title} />
+                <Link key={i} href={it.link}>
+                  <MenuSidebar
+                    isActive={it.title == title}
+                    icons={it.icons}
+                    name={it.title}
+                  />
+                </Link>
               ))}
             </GroupSidebar>
           ))}

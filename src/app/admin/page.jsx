@@ -12,6 +12,7 @@ import Link from "next/link";
 const page = () => {
   return (
     <AdminPage
+      title={"Dashboard"}
       breadcrumb={
         <Breadcrumb>
           <BreadcrumbList>
@@ -48,7 +49,9 @@ const page = () => {
           />
         </div>
         <div className="flex flex-col min-h-[500px] md:min-h-[600px] px-6 py-4 bg-white border-[2px] border-borderUtama rounded-[5px] w-full mt-8">
-            <h1 className="text-xl text-utama font-bold">Paket Soal Teerpopuler</h1>
+          <h1 className="text-xl text-utama font-bold">
+            Paket Soal Teerpopuler
+          </h1>
         </div>
       </div>
     </AdminPage>

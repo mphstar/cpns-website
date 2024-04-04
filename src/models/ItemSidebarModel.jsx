@@ -7,12 +7,12 @@ export const itemSidebar = [
       {
         icons: <Home stroke="auto" />,
         title: "Dashboard",
-        link: "/",
+        link: "/admin",
       },
       {
         icons: <Blocks stroke="auto" />,
         title: "Paket Soal",
-        link: "/",
+        link: "/admin/paket",
       },
       {
         icons: <Library stroke="auto" />,
